@@ -1,0 +1,49 @@
+{
+  "name": "compareOcrResults",
+  "description": "Compares outputs from different OCR engines and recommends the best performer.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "agent_name": {
+              "type": "string"
+            },
+            "raw_text": {
+              "type": "string"
+            },
+            "uncertainties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "confidence_score": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "agent_name",
+            "raw_text",
+            "uncertainties",
+            "confidence_score",
+            "notes"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "results"
+    ]
+  }
+}
