@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "agent_name": {
+      "type": "string",
+      "enum": [
+        "Google Vision"
+      ]
+    },
+    "raw_text": {
+      "type": "string"
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "agent_name",
+    "raw_text",
+    "uncertainties",
+    "confidence_score",
+    "notes"
+  ]
+}
