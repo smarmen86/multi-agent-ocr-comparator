@@ -1,0 +1,23 @@
+{
+  "name": "callTextractOcr",
+  "description": "Use AWS Textract to extract printed or handwritten text from an image.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "image_base64": {
+        "type": "string"
+      },
+      "mode": {
+        "type": "string",
+        "enum": [
+          "detect_text",
+          "analyze_document"
+        ]
+      }
+    },
+    "required": [
+      "image_base64",
+      "mode"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "runTesseractOcr",
+  "description": "Extract text from a base64 image using the Tesseract OCR engine.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "image_base64": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "image_base64"
+    ]
+  }
+}
